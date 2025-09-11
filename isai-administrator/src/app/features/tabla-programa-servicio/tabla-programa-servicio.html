@@ -1,0 +1,33 @@
+<div class="tabla-programa-servicio-container">
+  <h2>Listado de Programas de Servicio</h2>
+
+  <button class="btn-agregar">➕ Agregar nuevo</button>
+
+  <div class="tabla-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fecha y hora</th>
+          <th>Tipo de predicación</th>
+          <th>Lugar</th>
+          <th>Capitanes</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let programa of programas">
+          <td>{{ programa.id }}</td>
+          <td>{{ programa.fechaHora }}</td>
+          <td>{{ programa.tipo }}</td>
+          <td>{{ programa.lugar }}</td>
+          <td>{{ programa.capitanes }}</td>
+          <td>
+            <button class="btn-accion editar">✏️</button>
+            <button class="btn-accion eliminar">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
