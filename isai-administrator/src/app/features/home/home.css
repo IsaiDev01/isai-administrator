@@ -1,0 +1,141 @@
+/* Contenedor general */
+.home-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+/* 🔷 Nuevo fondo y estructura */
+.home-header {
+  background: linear-gradient(90deg, #3460AA 0%, #26367E 100%);
+  color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex layout para ícono + texto */
+.home-header-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Icono grande al inicio */
+.home-header-icon {
+  font-size: 48px;
+}
+
+/* Texto */
+.home-greeting {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.home-header h1 {
+  font-size: 28px;
+  margin: 0 0 6px;
+}
+
+.home-subtitle {
+  font-size: 15px;
+  margin: 0;
+  color: #dfe8ff;
+}
+
+/* Responsive: columna en móvil */
+@media (max-width: 600px) {
+  .home-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-header-icon {
+    font-size: 40px;
+  }
+
+  .home-header h1 {
+    font-size: 22px;
+  }
+
+  .home-greeting {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+
+
+/* Cards de acciones */
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Cada tarjeta */
+.home-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #3460AA;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.2s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Icono de la tarjeta */
+.card-icon {
+  font-size: 36px;
+  color: #3460AA;
+}
+
+/* Contenido */
+.card-content h3 {
+  margin: 0 0 8px;
+  color: #26367E;
+}
+
+.card-content p {
+  margin: 0 0 12px;
+  color: #666;
+}
+
+/* Botón de acción */
+.btn-card {
+  display: inline-block;
+  background-color: #3460AA;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-card:hover {
+  background-color: #274b87;
+}
+
+.btn-card.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}

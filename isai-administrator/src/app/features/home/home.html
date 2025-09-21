@@ -1,0 +1,23 @@
+<div class="home-wrapper">
+  <header class="home-header">
+  <div class="home-header-content">
+    <div class="home-header-icon">🙋‍♂️</div>
+    <div>
+      <p class="home-greeting">Bienvenido, {{ nombreUsuario }}</p>
+      <h1>Tu panel de administración</h1>
+      <p class="home-subtitle">Gestiona los programas de servicio fácilmente desde aquí</p>
+    </div>
+  </div>
+</header>
+
+  <section class="home-actions">
+    <div class="home-card" *ngFor="let card of menuList">
+      <div class="card-icon">{{card.icon}}</div>
+      <div class="card-content">
+        <h3>{{card.name}}</h3>
+        <p>{{card.descrip}}</p>
+        <a [routerLink]="card.route" class="btn-card">{{card.labelBtn}}</a>
+      </div>
+    </div>
+  </section>
+</div>

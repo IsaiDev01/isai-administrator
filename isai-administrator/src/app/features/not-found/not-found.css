@@ -1,0 +1,30 @@
+.not-found-container {
+  text-align: center;
+  padding: 60px 20px;
+  color: #26367E;
+}
+
+.not-found-container h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.not-found-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.btn-volver {
+  display: inline-block;
+  background-color: #3460AA;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #274b87;
+}
