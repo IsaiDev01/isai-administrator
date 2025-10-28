@@ -1,0 +1,192 @@
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.zona {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  flex: 1 1 300px; /* <- se adapta mejor */
+  max-width: 100%;
+  min-width: 280px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.grupo-filas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.fila-asientos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* 🎯 Diseño mejorado de botones de asiento */
+.fila-asientos button {
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4fd1c5;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+.fila-asientos button:hover {
+  transform: scale(1.1);
+  background-color: #3bbeb3;
+}
+
+/* Ocupado */
+.fila-asientos button.ocupado {
+  background-color: #ef6f6c;
+}
+
+.fila-asientos button.ocupado:hover {
+  background-color: #db5b59;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .fila {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .zona {
+    width: 93%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fila-asientos button {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+  }
+}
+
+
+/* ESTILOS DE LOS ASIENTOS */
+
+button {
+  font-size: 2rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+ .resumen {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #f8fafd;
+  border: 1px solid #e0e6ed;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.resumen h2 {
+  font-size: 1.8rem;
+  color: #26367e;
+  margin-bottom: 1.5rem;
+}
+
+.resumen-datos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.resumen-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  min-width: 160px;
+}
+
+.resumen-item.ocupado {
+  border-left: 6px solid #ef6f6c;
+}
+
+.resumen-item.disponible {
+  border-left: 6px solid #4fd1c5;
+}
+
+.resumen-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.resumen-item p {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.icono {
+  font-size: 2rem;
+}
+
+.resumen .acciones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resumen .acciones button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #26367e;
+  color: white;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.resumen .acciones button:hover {
+  background-color: #1b255e;
+}
+
+@media (max-width: 600px) {
+  .resumen-datos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resumen .acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

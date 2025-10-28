@@ -37,7 +37,7 @@ export class Home implements OnInit {
         descrip: "Registro de asistencia en las reuniones",
         icon: "👥",
         labelBtn: "Ir a la pagina",
-         route: ""
+         route: "/asistencia"
       },
        {
         id: 2,

@@ -1,0 +1,35 @@
+<div class="tabla-programa-servicio-container">
+  <h2>Listado de Asistencia</h2>
+
+  <button class="btn-agregar" [routerLink]="'/asistencia/agregar'">➕ Agregar nuevo</button>
+
+  <div class="tabla-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fecha</th>
+          <th>Acomodador</th>
+          <th>Dia</th>
+          <th>Asistencia total</th>
+          <th>Ver detalle</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let asistencia of ASISTENCIAS">
+          <td>{{ asistencia.id }}</td>
+          <td>{{ asistencia.date_created }}</td>
+          <td>{{ asistencia.user_check }}</td>
+          <td>{{ asistencia.day_name }}</td>
+          <td>{{ asistencia.attendance_total }}</td>
+          <td><button class="btn-accion editar">Ver detalle</button></td>
+          <td>
+            <button class="btn-accion editar">✏️</button>
+            <button class="btn-accion eliminar">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

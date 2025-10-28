@@ -1,0 +1,72 @@
+  <div class="acciones">
+    <button [routerLink]="'/asistencia'">Regresar</button>
+  </div>
+<div class="fila">
+  <!-- Zona Izquierda -->
+  <div class="zona">
+    <h4>Zona Izquierda</h4>
+    <div class="grupo-filas">
+      <div class="fila-asientos"
+           *ngFor="let fila of agruparAsientos(zonaIzquierda, 4)">
+        <button *ngFor="let a of fila"
+                (click)="ocuparAsiento(zonaIzquierda, a.id)">
+          {{ a.ocupado ? '🧍' : '🪑' }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zona Central -->
+  <div class="zona">
+    <h4>Zona Central</h4>
+    <div class="grupo-filas">
+      <div class="fila-asientos"
+           *ngFor="let fila of agruparAsientos(zonaCentral, 7)">
+        <button *ngFor="let a of fila"
+                (click)="ocuparAsiento(zonaCentral, a.id)">
+          {{ a.ocupado ? '🧍' : '🪑' }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Zona Derecha -->
+  <div class="zona">
+    <h4>Zona Derecha</h4>
+    <div class="grupo-filas">
+      <div class="fila-asientos"
+           *ngFor="let fila of agruparAsientos(zonaDerecha, 4)">
+        <button *ngFor="let a of fila"
+                (click)="ocuparAsiento(zonaDerecha, a.id)">
+          {{ a.ocupado ? '🧍' : '🪑' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="resumen">
+  <h2>Resumen de Asistencia</h2>
+
+  <div class="resumen-datos">
+    <div class="resumen-item ocupado">
+      <span class="icono">🧍</span>
+      <div>
+        <h4>Ocupados</h4>
+        <p>{{ totalOcupados }}</p>
+      </div>
+    </div>
+    <div class="resumen-item disponible">
+      <span class="icono">🪑</span>
+      <div>
+        <h4>Disponibles</h4>
+        <p>{{ totalDisponibles }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="acciones">
+    <button (click)="reiniciarAsientos()">🔄 Reiniciar</button>
+    <button (click)="guardarAsistencia()">💾 Guardar</button>
+    <button (click)="enviarPorWhatsapp()">📤 WhatsApp</button>
+  </div>
+</div>
